@@ -1,0 +1,29 @@
+.input {
+    border: 1px solid red;
+}
+
+.show {
+    opacity: 1;
+}
+
+.hide {
+    /* opacity: 0; */
+    animation: item 2s ease-in forwards;
+}
+
+@keyframes item {
+    0% {
+        color: red;
+        font-size: 22px;
+    }
+
+    50% {
+        color: blue;
+        font-size: 10px;
+    }
+
+    100% {
+        color: green;
+        font-size: 22px;
+    }
+}
