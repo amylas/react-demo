@@ -13,18 +13,15 @@ export default (state = defaultState, action) => {
             newState.inputValue = action.value
             console.log(newState)
             return newState
-            break
         case ADD_TODO_ITEM:
             newState = JSON.parse(JSON.stringify(state))
             newState.list.push(action.value)
             newState.inputValue = ''
             return newState
-            break
         case DELETE_TODO_ITEM:
             newState = JSON.parse(JSON.stringify(state))
             newState.list.splice(action.index, 1)
             return newState
-            break
         default:
             return state
     }

@@ -16,12 +16,10 @@
         color: red;
         font-size: 22px;
     }
-
     50% {
         color: blue;
         font-size: 10px;
     }
-
     100% {
         color: green;
         font-size: 22px;
