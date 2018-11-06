@@ -11,7 +11,6 @@ export default (state = defaultState, action) => {
         case CHANGE_INPUT_VALUE:
             newState = JSON.parse(JSON.stringify(state))
             newState.inputValue = action.value
-            console.log(newState)
             return newState
         case ADD_TODO_ITEM:
             newState = JSON.parse(JSON.stringify(state))
