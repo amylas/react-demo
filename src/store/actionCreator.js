@@ -1,5 +1,4 @@
-import { CHANGE_INPUT_VALUE, ADD_TODO_ITEM, DELETE_TODO_ITEM, INIT_LIST_ACTION } from './actionTypes'
-import axios from 'axios'
+import { CHANGE_INPUT_VALUE, ADD_TODO_ITEM, DELETE_TODO_ITEM, INIT_LIST_ACTION, INIT_LIST } from './actionTypes'
 
 export const getInputChangeAction = (value) => ({
     value,
@@ -19,6 +18,10 @@ export const getDeleteItemAction = (index) => ({
 export const initListAction = (data) => ({
     data,
     type: INIT_LIST_ACTION
+})
+
+export const initList = () => ({
+    type: INIT_LIST
 })
 
 // export const getInitActionList = () => {

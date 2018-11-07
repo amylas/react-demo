@@ -1,11 +1,21 @@
 import { put, takeEvery } from 'redux-saga/effects'
-import {  }
+import axios from 'axios'
+import { initList } from './actionCreator'
+import { INIT_LIST } from './actionTypes'
 
-function* getTodoList(action) {
+function* fetchList() {
     try {
-       const user = yield call(Api.fetchUser, action.payload.userId);
-       yield put({type: "USER_FETCH_SUCCEEDED", user: user});
+        const res = yield axios.get('xxxx')
+        console.log(res)
+        const action = initList()
+        yield put(action)
     } catch (e) {
-       yield put({type: "USER_FETCH_FAILED", message: e.message});
+       console.log('请求失败')
     }
  }
+
+ function* mySaga () {
+    yield takeEvery(INIT_LIST, fetchList)
+ }
+
+ export default mySaga
